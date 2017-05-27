@@ -1,7 +1,23 @@
+.btn {
+  cursor: pointer;
+}
+
 .reminder-list {
   margin-top: 1em;
 }
 
-.btn {
-  cursor: pointer;
+.reminder-list-controls {
+  margin-top: 1em;
+}
+
+.reminder-list-controls * + * {
+  margin-left: .5em;
+}
+
+.form-inline {
+  margin-top: 2em;
+}
+
+.form-inline * + * {
+  margin-left: .5em;
 }

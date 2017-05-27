@@ -1,5 +1,13 @@
-import { ADD_REMINDER, DELETE_REMINDER, CLEAR_REMINDERS } from '../constants';
+import {
+  ADD_REMINDER,
+  DELETE_REMINDER,
+  CLEAR_REMINDERS,
+  UNDO_REMINDERS,
+  REDO_REMINDERS
+} from '../constants';
 import { bake_cookie, read_cookie } from 'sfcookies';
+import { combineReducers } from 'redux';
+import undoable from 'redux-undo';
 
 const reminder = (action) => {
   let { text, dueDate } = action;
@@ -41,4 +49,9 @@ const reminders = (state = [], action) => {
   }
 }
 
-export default reminders;
+export default combineReducers({
+  reminders: undoable(reminders, {
+    undoType: UNDO_REMINDERS,
+    redoType: REDO_REMINDERS
+  })
+});
