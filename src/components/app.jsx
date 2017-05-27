@@ -49,7 +49,7 @@ class App extends Component {
       <div id="App" className="container">
         <h1 className="title">
           Remind.me
-          <p className="small">Remnders done right</p>
+          <p className="small">Reminders done right!</p>
         </h1>
 
         <div className="form-inline">
