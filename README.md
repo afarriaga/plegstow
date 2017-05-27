@@ -5,8 +5,8 @@ And inspired in the following tutorial: https://youtu.be/4zIx7J882Fg
 To run clone this branch, install and start.
 
 ```bash
-git clone -b redux-react-example https://github.com/afarriaga/plegstow.git redux-react-example
-cd redux-react-example
+git clone -b redux-react-undo-example https://github.com/afarriaga/plegstow.git redux-react-undo-example
+cd redux-react-undo-example
 yarn install
 yarn start
 ```
